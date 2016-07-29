@@ -2,8 +2,6 @@
 
 namespace Datitisev\Reactions;
 
-use Flarum\Core\Discussion;
-use Flarum\Core\Permission;
 use Flarum\Core\Support\ScopeVisibilityTrait;
 use Flarum\Core\User;
 use Flarum\Database\AbstractModel;
@@ -13,7 +11,7 @@ class Reaction extends AbstractModel
     use ScopeVisibilityTrait;
 
     /**
-     * @{inheritdoc}
+     * {@inheritdoc}
      */
     protected $table = 'reactions';
 
@@ -31,11 +29,12 @@ class Reaction extends AbstractModel
      * @param string $userId
      * @param string $postId
      * @param string $reaction
+     *
      * @return static
      */
     public static function build($userId, $postId, $reaction)
     {
-        $reaction = new static;
+        $reaction = new static();
 
         $reaction->userId = $userId;
         $reaction->postId = $postId;
@@ -59,5 +58,4 @@ class Reaction extends AbstractModel
     {
         return $this->belongsTo('Flarum\Core\User', 'user_id');
     }
-
 }
