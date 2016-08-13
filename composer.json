@@ -1,5 +1,5 @@
 {
-  "name": "datitisev/flarum-ext-reactions",
+  "name": "namjoker/flarum-ext-reactions-one",
   "description": "Reactions for Flarum",
   "type": "flarum-extension",
   "require": {
@@ -9,7 +9,7 @@
     {
       "name": "David Sevilla Martín",
       "email": "dsevilla192@icloud.com",
-      "homepage": "https://github.com/datitisev",
+      "homepage": "https://github.com/namjoker",
       "role": "Developer"
     }
   ],
